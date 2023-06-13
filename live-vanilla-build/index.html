@@ -13,38 +13,37 @@
   </head>
   <body>
     <main>
-      <div class="grid">
+      <div class="grid" data-id="grid">
         <!-- Turn indicator -->
-        <div class="turn">
-          <i class="fa-solid fa-x turquoise"></i>
-          <p class="turquoise">Player 1, you're up!</p>
+        <div class="turn turquoise" data-id="turn">
+          <i class="fa-solid fa-x"></i>
+          <p>Player 1, you're up!</p>
         </div>
 
         <!-- Dropdown menu -->
-        <div class="menu">
-          <button class="menu-btn">
+        <div class="menu" data-id="menu">
+          <button class="menu-btn" data-id="menu-btn">
             Actions
             <i class="fa-solid fa-chevron-down"></i>
           </button>
 
-          <div class="items border hidden">
-            <button>Reset</button>
-            <button>New Round</button>
+          <div class="items border hidden" data-id="menu-items">
+            <button data-id="reset-btn">Reset</button>
+            <button data-id="new-round-btn">New Round</button>
           </div>
         </div>
 
         <!-- Game board -->
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
-        <div class="square shadow"></div>
+        <div id="1" class="square shadow" data-id="square"></div>
+        <div id="2" class="square shadow" data-id="square"></div>
+        <div id="3" class="square shadow" data-id="square"></div>
+        <div id="4" class="square shadow" data-id="square"></div>
+        <div id="5" class="square shadow" data-id="square"></div>
+        <div id="6" class="square shadow" data-id="square"></div>
+        <div id="7" class="square shadow" data-id="square"></div>
+        <div id="8" class="square shadow" data-id="square"></div>
+        <div id="9" class="square shadow" data-id="square"></div>
 
-        <!-- Scoreboard -->
         <!-- Scoreboard -->
         <div class="score shadow" style="background-color: var(--turquoise)">
           <p>Player 1</p>
@@ -52,7 +51,7 @@
         </div>
         <div class="score shadow" style="background-color: var(--light-gray)">
           <p>Ties</p>
-          <span data-id="ties">0</span>
+          <span data-id="ties">0 ties</span>
         </div>
         <div class="score shadow" style="background-color: var(--yellow)">
           <p>Player 2</p>
@@ -83,5 +82,7 @@
         <button data-id="modal-btn">Play again</button>
       </div>
     </div>
+
+    <script src="js/controller.js" type="module"></script>
   </body>
 </html>
